@@ -6,6 +6,7 @@ defmodule BambooExample.Email do
   def welcome_email do
     new_email()
     |> from({"Some one random", "no-reply@exmaple.com"})
+    |> to({"Some random recipient", "recipient@exmaple.com"})
     |> put_text_layout({BambooExampleWeb.LayoutView, "email.text"})
     |> put_html_layout({BambooExampleWeb.LayoutView, "email.html"})
     # Pass atom to render html AND plain text templates

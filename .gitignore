@@ -7,14 +7,4 @@ erl_crash.dump
 *.ez
 *.beam
 /config/*.secret.exs
-
-.DS_Store
-
-assets/node_modules/
-
-# VSCode
 .elixir_ls/
-.vscode/
-.deliver/releases/
-.deliver/config
-.env

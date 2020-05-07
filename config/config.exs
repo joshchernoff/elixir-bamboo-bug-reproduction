@@ -18,7 +18,9 @@ config :bamboo_example, BambooExampleWeb.Endpoint,
   pubsub_server: BambooExample.PubSub,
   live_view: [signing_salt: "iuC1odaa"]
 
-config :bamboo_example, BambooExample.Mailer, adapter: Bamboo.LocalAdapter
+config :bamboo_example, BambooExample.Mailer,
+  adapter: Bamboo.LocalAdapter,
+  open_email_in_browser_url: "http://localhost:4000/sent_emails"
 
 # Configures Elixir's Logger
 config :logger, :console,

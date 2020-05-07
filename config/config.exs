@@ -18,9 +18,7 @@ config :bamboo_example, BambooExampleWeb.Endpoint,
   pubsub_server: BambooExample.PubSub,
   live_view: [signing_salt: "iuC1odaa"]
 
-config :bamboo_example, MyApp.Mailer,
-  adapter: Bamboo.MandrillAdapter,
-  api_key: "an_api_key_not_important_for_the_example"
+config :bamboo_example, BambooExample.Mailer, adapter: Bamboo.LocalAdapter
 
 # Configures Elixir's Logger
 config :logger, :console,

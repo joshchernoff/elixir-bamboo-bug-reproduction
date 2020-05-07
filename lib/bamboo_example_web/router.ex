@@ -40,4 +40,9 @@ defmodule BambooExampleWeb.Router do
       live_dashboard("/dashboard", metrics: BambooExampleWeb.Telemetry)
     end
   end
+
+  if Mix.env() == :dev do
+    # If using Phoenix
+    forward("/sent_emails", Bamboo.SentEmailViewerPlug)
+  end
 end
